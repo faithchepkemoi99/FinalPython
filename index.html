@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Crop Dashboard</title></head>
+<body>
+  <h1>Crop Monitoring Dashboard</h1>
+  <a href="/add">Add New Crop</a>
+  <ul>
+    {% for crop in crops %}
+      <li>
+        {{ crop[1] }} in {{ crop[2] }} - Status: {{ crop[3] }} |
+        <a href="/weather/{{ crop[2] }}">Check Weather</a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
